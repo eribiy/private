@@ -15,7 +15,7 @@ $font-regular: 14px "Open Sans";
 }
 
 .center {
-	width: $width-l;
+	max-width: $width-l;
 	margin: 0 auto;
 	padding: $padding-l;
 }
@@ -209,7 +209,7 @@ $font-regular: 14px "Open Sans";
 }
 
 .menu-wrapper {
-	width: $width-l;
+	max-width: $width-l;
 	margin: 0 auto;
 	padding: $padding-l;
 }
@@ -548,14 +548,27 @@ $font-regular: 14px "Open Sans";
 		padding: 12px 32px;
 		margin-bottom: 16px;
 	}
+	.active,
+	.level0:hover,
+	.level1:hover,
+	.level2:hover {
+		background: $active-color;
+		border-radius: 20px;
+		color: #fff;
+	}
 }
-
+.level0.accordion,
+.level1.accordion,
+.level2.accordion {
+	padding: 5px 29px 5px 21px;
+}
 .level0 {
 	font-family: $OpenSans;
 	font-size: 18px;
 	color: #000;
 	display: inline-block;
-	padding: 12px 23px 12px 0;
+	padding: 5px 21px;
+	margin: 9px 23px 9px 0;
 }
 
 .level1 {
@@ -567,7 +580,7 @@ $font-regular: 14px "Open Sans";
 	@extend .level0;
 	font-size: 14px;
 	color: #666666;
-	padding: 13px 23px 13px 0;
+	margin: 8px 23px 8px 0;
 }
 
 .accordion {
@@ -578,7 +591,7 @@ $font-regular: 14px "Open Sans";
 .arrowClose:after, .arrowOpen:after {
 	content: "";
 	position: absolute;
-	right: 0;
+	right: 8px;
 	top: calc(50% - 5px);
 	width: 14px;
 	height: 10px;
@@ -596,4 +609,11 @@ $font-regular: 14px "Open Sans";
 
 .other-goods-head {
 	font-size: 35px;
+}
+
+@media screen and (max-width: 970px)  {
+	.goods-head {
+
+		margin: 0 0 14px;
+	}
 }

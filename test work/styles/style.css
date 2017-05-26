@@ -3,7 +3,7 @@
 }
 
 .center {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -199,7 +199,7 @@
 }
 
 .menu-wrapper {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -545,12 +545,30 @@
   margin-bottom: 16px;
 }
 
+.asaide .active,
+.asaide .level0:hover,
+.asaide .level1:hover,
+.asaide .level2:hover,
+.asaide .level1:hover,
+.asaide .level2:hover {
+  background: #ee3346;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.level0.accordion, .accordion.level1, .accordion.level2,
+.level1.accordion,
+.level2.accordion {
+  padding: 5px 29px 5px 21px;
+}
+
 .level0, .level1, .level2 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: #000;
   display: inline-block;
-  padding: 12px 23px 12px 0;
+  padding: 5px 21px;
+  margin: 9px 23px 9px 0;
 }
 
 .level1 {
@@ -560,7 +578,7 @@
 .level2 {
   font-size: 14px;
   color: #666666;
-  padding: 13px 23px 13px 0;
+  margin: 8px 23px 8px 0;
 }
 
 .accordion {
@@ -571,7 +589,7 @@
 .arrowClose:after, .arrowOpen:after {
   content: "";
   position: absolute;
-  right: 0;
+  right: 8px;
   top: calc(50% - 5px);
   width: 14px;
   height: 10px;
@@ -589,4 +607,10 @@
 
 .other-goods-head {
   font-size: 35px;
+}
+
+@media screen and (max-width: 970px) {
+  .goods-head {
+    margin: 0 0 14px;
+  }
 }
