@@ -2,6 +2,10 @@
  * Created by kate on 25.05.17.
  */
 $(document).ready(function(){
+    $('.mobile-btn').click(function () {
+        $('.mobile-nav').slideToggle();
+    });
+    
     $('.accordion').click(function(){
 		$(this).toggleClass('arrowClose').toggleClass('arrowOpen');
      
@@ -11,7 +15,8 @@ $(document).ready(function(){
         } else {
         	panel.css('display', 'block');
         } 
-    });   
+    });
+
 });
 
 

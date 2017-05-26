@@ -28,6 +28,37 @@ $font-regular: 14px "Open Sans";
 	padding: 8px 15px;
 }
 
+.mobile-nav-wrapper {
+	display:none;
+}
+
+.mobile-btn {
+	width: 40px;
+    height: 20px;
+    border: none;
+    margin: 7px 0 0px 16px;
+    background: transparent;
+    background: url(../images/sprite.png);
+    background-position: -15px -163px;
+}
+.mobile-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    a {
+    	display: block;
+	    color: #222222;
+	    background: #f7f7f7;
+	    border-bottom: 1px solid #222222;
+	    padding: 14px 0;
+	    font-size: 18px;
+	    text-align: center;
+	    text-transform: uppercase;
+    }
+}
+
 .header-nav {
 	display: inline-block;
 	font-size: 0;
@@ -541,8 +572,8 @@ $font-regular: 14px "Open Sans";
 
 .asaide {
 	display: table-cell;
-	width: 260px;
-	padding: 0 4px;
+	width: 25%;
+    padding: 0 30px;
 
 	.btn {
 		padding: 12px 32px;
@@ -568,7 +599,7 @@ $font-regular: 14px "Open Sans";
 	color: #000;
 	display: inline-block;
 	padding: 5px 21px;
-	margin: 9px 23px 9px 0;
+	margin: 9px 23px 9px -21px;
 }
 
 .level1 {
@@ -609,11 +640,80 @@ $font-regular: 14px "Open Sans";
 
 .other-goods-head {
 	font-size: 35px;
+
 }
 
-@media screen and (max-width: 970px)  {
-	.goods-head {
+@media screen and (max-width: 1010px) {
+	.asaide {
+    	padding: 0 0 0 25px;
+    	.btn {
+    		padding: 12px 26px;
+    	}
+	}
+}
 
-		margin: 0 0 14px;
+@media screen and (max-width: 970px) {
+	.goods-head {
+	    margin: 0 0 14px;
+	}
+	.goods-number {
+	    padding-left: 9px;
+	}
+}
+
+@media screen and (max-width: 925px) {
+	.asaide {
+    	padding: 0 0 0 15px;
+    	.btn {
+    		padding: 12px 6px;
+    	}
+	}
+	.level0, .level1, .level2 {
+    	margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.asaide, .page-nav-wrapper {
+    	display: none;
+	}
+	.row {
+	    width: 100%;
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.header-nav {
+    	display: none;
+	}
+	.header {
+		height: 50px;
+	    padding: 12px 15px;
+	}
+	.mobile-nav-wrapper {
+		display:inline-block;
+	}
+	.header-icon .header-icon-item {
+	    margin: 0 53px 0 -4px;
+	}
+	.header-icon .header-icon-item:first-child {
+    	margin: 0 44px 0 0;
+	}
+	.center-border {
+		border-top: 1px solid #cccccc;
+		padding-top: 22px;
+	}
+	.menu-wrapper {
+    	display: none;
+	}
+	.goods-head {
+    	margin: 0px 7px 14px;
+	}
+	.row {
+	    width: 663px;
+	}
+	.other-goods-head {
+	    font-size: 28px;
+	    font-weight: 300;
 	}
 }
