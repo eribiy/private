@@ -6,9 +6,9 @@
     <title>HM Store</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
-    <link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
 </head>
 <body>
 <div class="wrapper">
@@ -177,16 +177,34 @@
                         <button class="btn">Быстрый заказ</button>
                     </div>
                     <div class="slider-wrapper">
-                        <ul class="bxslider-main">
-                            <li><img src="images/slide1.jpg" /></li>
-                            <li><img src="images/slide2.jpg" /></li>
-                        </ul>
-
-                        <div id="bx-pager-main" style="position: absolute; left: 800px; top: 700px;">
-                            <a data-slide-index="0" href=""><img src="images/slide1.jpg" width="100"/></a>
-                            <a data-slide-index="1" href=""><img src="images/slide2.jpg" width="100"/></a>
+                        <div class="bxslider-main-wrapper">
+                            <div class="bxslider-main">
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                            </div>
+                        </div>
+                        <div class="bxslider-vertical-wrapper">
+                            <div class="bxslider-vertical">
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                                <div class="slide"><img src="images/slide1.jpg" /></div>
+                                <div class="slide"><img src="images/slide2.jpg" /></div>
+                            </div>
                         </div>
                     </div>
+
+                        
+                    
                     <ul class="link-wrapper">
                         <li class="link-item"><a href="#">Оплата и доставка</a></li>
                         <li class="link-item"><a href="#">Смотреть видео</a></li>
@@ -202,20 +220,6 @@
                     </div>
                 </div>
                 <div class="info-goods">
-                    <!-- <ul class="info-tabs-wrapper">
-                        <li data-tab="description" class="info-tab-link active">Описание
-                            <button class="tab-icon description"></button>
-                        </li>
-                        <li data-tab="warranty" class="info-tab-link">Гарантия
-                            <button class="tab-icon warranty"></button>
-                        </li>
-                        <li data-tab="designer" class="info-tab-link">Дизайнер
-                            <button class="tab-icon designer"></button>
-                        </li>
-                        <li data-tab="brand" class="info-tab-link">Бренд
-                            <button class="tab-icon brand"></button>
-                        </li>
-                    </ul> -->
                      <ul class="info-tabs-wrapper">
                         <li data-tab="description" class="info-tab-link active">
                             <span>Описание</span>
@@ -272,8 +276,8 @@
                 <button class="btn">Перейти в каталог</button>
                 <ul class="sidebar">
                     <li class="sidebar-item">
-                        <span class="accordion level0 arrowClose">Кухня</span>
-                        <ul class="panel">
+                        <span class="accordion level0 arrowOpen">Кухня</span>
+                        <ul class="panel accordion-open">
                             <li>
                                 <span class="accordion level1 arrowClose">Техника для кухни</span>
                                 <ul class="panel">
@@ -282,8 +286,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <span class="accordion level1 arrowClose">Кухонные аксессуары</span>
-                                <ul class="panel">
+                                <span class="accordion level1 arrowOpen">Кухонные аксессуары</span>
+                                <ul class="panel accordion-open">
                                     <li><a href="#" class="level2">Венчики, кисти</a></li>
                                     <li><a href="#" class="level2">Вилки, щипцы</a></li>
                                     <li><a href="#" class="level2">Держатели</a></li>
@@ -304,7 +308,7 @@
                                     <li><a href="#" class="level2">Сушки, ящики для посуды</a></li>
                                     <li><a href="#" class="level2">Таймеры кухонные</a></li>
                                     <li><a href="#" class="level2">Терки</a></li>
-                                    <li><a href="#" class="level2">Термокружки, термосы</a></li>
+                                    <li><a href="#" class="level2 active">Термокружки, термосы</a></li>
                                     <li><a href="#" class="level2">Посуда для микроволновой печи</a></li>
                                     <li><a href="#" class="level2">Формы для льда</a></li>
                                     <li><a href="#" class="level2">Фрешницы</a></li>
@@ -356,44 +360,82 @@
             <section class="other-goods">
                 <h2 class="goods-head other-goods-head">Возможно Вас заинтересуют следующие товары</h2>
                 <div class="slider-wrapper">
-                    <ul class="bxslider">
-                        <li>
-                            <img src="./images/logo.png"/>
-                            A
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            B
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            C
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            AA
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            BB
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            CC
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            AAA
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            BBB
-                        </li>
-                        <li>
-                            <img src="./images/logo.png"/>
-                            CCC
-                        </li>
-                    </ul>
+                    <div class="bxslider-caption-wrapper">
+                            <div class="bxslider-caption">
+                                <div class="slide">
+                                    <img src="images/image1.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image2.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image3.jpg" />
+                                    <h5 class="goods-head">
+                                            Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image4.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.1.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.2.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image3.1.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image3.2.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image4.1.jpg" />
+                                    <h5 class="goods-head">
+                                        Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey
+                                    </h5>
+                                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span><br>
+                                    <span class="new-price">68 269,<span class="currensy">UAH</span></span>
+                                </div>                               
+                            </div>
+                    </div>
                 </div>
                 <div class="outside">
                     <h3>This div is outside of the slider</h3>
