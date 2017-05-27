@@ -5,7 +5,7 @@ $(document).ready(function(){
     $('.mobile-btn').click(function () {
         $('.mobile-nav').slideToggle();
     });
-    
+
     $('.accordion').click(function(){
 		$(this).toggleClass('arrowClose').toggleClass('arrowOpen');
      
@@ -17,10 +17,19 @@ $(document).ready(function(){
         } 
     });
 
+    
+
+     $('.info-tab-link').click(function(){   
+        $('.tab-icon').css('display', 'block');
+        $('.info-tab-link').css('font-size', '0');
+        $('.info-tab-link.active').css('font-size', '18px').children('.tab-icon').css('display', 'none');
+        
+
+    })
+    
 });
 
-
-
+/*
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
@@ -36,7 +45,12 @@ function openTab(evt, tabName) {
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-}
+
+
+       
+        
+    
+}*/
 
 
 

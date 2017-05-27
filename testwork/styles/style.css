@@ -27,18 +27,25 @@
 .mobile-nav {
   display: none;
   position: absolute;
+  z-index: 2;
   width: 100%;
   left: 0;
-  top: 100px; }
+  top: 50px; }
   .mobile-nav a {
     display: block;
-    color: #222222;
-    background: #f7f7f7;
+    color: #454647;
+    background: #f0f3f8;
     border-bottom: 1px solid #222222;
     padding: 14px 0;
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     text-align: center;
     text-transform: uppercase; }
+  .mobile-nav a:hover {
+    color: #ee3346; }
+  .mobile-nav .panel a {
+    padding: 10px 0;
+    font-size: 16px; }
 
 .header-nav {
   display: inline-block;
@@ -144,7 +151,7 @@
   .head .info-store {
     display: inline-block;
     width: 200px; }
-  .head .info-store:first-child {
+  .head .info-store-schedule {
     width: 175px; }
   .head .head-info {
     margin-bottom: 11px;
@@ -382,6 +389,28 @@
     font-weight: 600;
     color: #ee3346; }
 
+.tab-icon {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  background: url(../images/sprite.png); }
+
+.tab-icon.description {
+  background-position: -14px -269px; }
+
+.tab-icon.guarantee {
+  background-position: -56px -269px; }
+
+.tab-icon.designer {
+  width: 27px;
+  background-position: -93px -269px; }
+
+.tab-icon.brand {
+  width: 27px;
+  height: 27px;
+  background-position: -137px -270px; }
+
 .tabcontent {
   display: none; }
   .tabcontent .article {
@@ -525,7 +554,75 @@
   .goods-head {
     margin: 0px 7px 14px; }
   .row {
-    width: 663px; }
+    width: 100%; }
   .other-goods-head {
     font-size: 28px;
-    font-weight: 300; } }
+    font-weight: 300; }
+  .head .info-store-schedule {
+    display: none; } }
+
+@media screen and (max-width: 700px) {
+  .goods-head, .goods-number-wrapper {
+    text-align: center; }
+  .price-wrapper,
+  .buy-btn-wrapper {
+    display: block;
+    text-align: center; }
+  .buy-btn-wrapper {
+    float: none;
+    margin: 22px 0; }
+  .slider-wrapper {
+    margin-top: 0; }
+  .tabcontent .download-links-wrapper .download-item {
+    width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  .head .info-store-wrapper {
+    display: none; }
+  .link-wrapper .link-item {
+    width: 50%;
+    margin-bottom: 5px; }
+  .link-wrapper .link-item:nth-child(odd) {
+    border-radius: 8px 0 0 8px; }
+  .link-wrapper .link-item:nth-child(even) {
+    border-right: 1px solid #000;
+    border-radius: 0 8px 8px 0; }
+  .icon-wrapper {
+    text-align: center; } }
+
+@media screen and (max-width: 400px) {
+  .center-head {
+    display: none; }
+  .center-border {
+    border: none;
+    padding: 0; }
+  .main {
+    padding: 20px 0 60px; }
+  .goods-head, .other-goods-head {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px; }
+  .header {
+    position: relative; }
+  .header:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: url(../images/sprite.png);
+    background-position: -7px -209px; }
+  .mobile-btn {
+    margin: 7px 0 0px 37px; }
+  .header-icon .header-icon-item {
+    margin: 0 19px 0 12px; }
+  .header-icon .header-icon-item:first-child {
+    margin: 0; }
+  .row {
+    margin-top: 24px; }
+  .price-wrapper .new-price {
+    display: block; }
+  .price-wrapper .new-price {
+    margin: 0 7px 9px 10px;
+    font-size: 35px; } }

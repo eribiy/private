@@ -39,27 +39,27 @@
             <div class="mobile-nav-wrapper">
                 <button class="mobile-btn"></button>
                 <ul class="mobile-nav">
-                    <li class=""><a href="#" class="">Акции</a></li>
-                    <li class="">
-                        <span class="accordion">Читать</span>
+                    <li><a href="#">Акции</a></li>
+                    <li>
+                        <a class="accordion arrowClose">Читать</a>
                         <ul class="panel">
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
                         </ul>
                     </li>
-                    <li class="">
-                        <a href="#" class="accordion">Дополнительно</a>
+                    <li>
+                        <a href="#" class="accordion arrowClose">Дополнительно</a>
                         <ul class="panel">
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
-                            <li class=""><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
+                            <li><a href="#">item</a></li>
                         </ul>
                     </li>
-                <li class=""><a href="#" class="">Сотрудничество</a></li>
-                <li class=""><a href="#" class="">Контакты</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+                <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
             <ul class="header-icon">
@@ -69,13 +69,13 @@
             </ul>
     </header>
     </div>
-    <div class="center">
+    <div class="center center-head">
         <div class="head">
             <div class="logo-wrapper">
                 <a href="#"><img class="logo" src="images/logo.png"></a>
             </div>
             <div class="info-store-wrapper">
-                <div class="info-store">
+                <div class="info-store info-store-schedule">
                     <h5 class="head-info">График работы:</h5>
                     <span class="info-item">пн–сб: 09:00–20:00</span><br>
                     <span class="info-item">вс: 10:00–17:00</span>
@@ -163,7 +163,9 @@
         <div class="main clearfix">
             <section class="current-goods">
                 <h2 class="goods-head">Книжный шкаф Calligaris Lib, Double-sided tall bookcase, Finish glossy white and Glass smoked grey </h2>
-                <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span>
+                <div class="goods-number-wrapper">
+                    <span class="goods-number">PN: AE113AWBPJG1C7BK3D01</span>
+                </div>
                 <div class="row">
                     <div class="price-wrapper">
                         <span class="new-price">946 470,<span class="currensy">UAH</span></span>
@@ -192,18 +194,25 @@
                 </div>
                 <div class="info-goods">
                     <ul class="info-tabs-wrapper">
-                        <li class="info-tab-link active" onclick="openTab(event, 'description')">Описание</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'guarantee')">Гарантия</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'designer')">Дизайнер</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'brand')">Бренд</li>
+                        <li class="info-tab-link active" onclick="openTab(event, 'description')">Описание
+                            <button class="tab-icon description"></button>
+                        </li>
+                        <li class="info-tab-link" onclick="openTab(event, 'guarantee')">Гарантия
+                            <button class="tab-icon guarantee"></button>
+                        </li>
+                        <li class="info-tab-link" onclick="openTab(event, 'designer')">Дизайнер
+                            <button class="tab-icon designer"></button>
+                        </li>
+                        <li class="info-tab-link" onclick="openTab(event, 'brand')">Бренд
+                            <button class="tab-icon brand"></button>
+                        </li>
                     </ul>
                     <div id="description" class="tabcontent active">
                         <p class="article">Одна линия, много возможностей. Cерия Lirio Nick-Knack от Philips, новый торшер, который вдохновляет, идея светильника начинается с прямой линии, Lirio Nick-Knack могут быть скручены в 16 различных положениях. Доступные напольные светильники Lirio Nick-Knack выполнены в 5 ярких цветах (красный, жёлтый, синий, белый, чёрный), это игривые торшеры приносят эффект прямого и отраженного освещения, с дизайнерскими светильниками Lirio Nick-Knack вы можете читать книгу или просто создать приятную атмосферу в вашем доме. Сочетая элегантный дизайн с LED лампой, Lirio Nick-Knack является одной из первых линий большой истории вашего дома.</p>
                         <div class="download-links-wrapper">
                             <span class="download-item">
                                 Скачать 
-                                <a class="download-link" href="#">«Брошюра для кресла Herman Miller Aeron_EN.pdf»</a>
-                                , (4,3 MB)
+                                <a class="download-link" href="#">«Брошюра для кресла Herman Miller Aeron_EN.pdf»</a>, (4,3 MB)
                             </span>
                             <span class="download-item">
                                 Скачать 
@@ -212,8 +221,7 @@
                             </span>
                             <span class="download-item">
                                 Скачать 
-                                <a class="download-link" href="#">«Инструкция по разборке кресла Herman Miller Aeron_EN.pdf»</a>
-                                , (5,3 MB)
+                                <a class="download-link" href="#">«Инструкция по разборке кресла Herman Miller Aeron_EN.pdf»</a>, (5,3 MB)
                             </span>
                             <span class="download-item">
                                 Скачать 
