@@ -35,6 +35,12 @@ $(document).ready(function(){
         nextText: 'Onward →',
         prevText: '← Go back'
     });
+
+    $('.bxslider-main').bxSlider({
+        mode: 'vertical',
+        slideMargin: 5,
+        pagerCustom: '#bx-pager-main'
+    });
 });
 
 
