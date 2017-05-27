@@ -1,6 +1,5 @@
 .wrapper {
-  background: #fff;
-}
+  background: #fff; }
 
 .center {
   max-width: 1170px;
@@ -629,7 +628,7 @@
     margin: 0 7px 9px 10px;
     font-size: 35px; } }
 
-.bxslider li {
+.bxslider li div {
     display: inline-block;
     width: 300px;
 }

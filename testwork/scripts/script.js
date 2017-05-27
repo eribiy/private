@@ -27,6 +27,8 @@ $(document).ready(function(){
     });
 
     $('.bxslider').bxSlider({
+        minSlides: 3,
+        pager: false,
         nextSelector: '#slider-next',
         prevSelector: '#slider-prev',
         nextText: 'Onward →',
