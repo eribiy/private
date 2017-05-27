@@ -627,8 +627,3 @@
   .price-wrapper .new-price {
     margin: 0 7px 9px 10px;
     font-size: 35px; } }
-
-.bxslider li div {
-    display: inline-block;
-    width: 300px;
-}
