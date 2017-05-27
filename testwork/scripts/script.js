@@ -81,13 +81,11 @@ $(document).ready(function() {
             slider_vertical.reloadSlider({
                 mode: 'horizontal'
             });
-        } else {
-            if ((windowWidthNew > 600) && (windowWidth < 600)) {
-                windowWidth = windowWidthNew;
-                slider_vertical.reloadSlider({
-                    mode: 'vertical'
-                });
-            }
+        } else if ((windowWidthNew > 600) && (windowWidth < 600)) {
+            windowWidth = windowWidthNew;
+            slider_vertical.reloadSlider({
+                mode: 'vertical'
+            });
         }
     });
 
@@ -104,19 +102,31 @@ $(document).ready(function() {
                 maxSlides: 3,
                 slideWidth: 284
             });
-        } else {
-            if ((windowWidthNew > 1100) && (windowWidthCaption < 1100)) {
-                windowWidthCaption = windowWidthNew;
-                bxslider_caption.reloadSlider({
-                    pager: false,
-                    controls: true,
-                    minSlides: 1,
-                    maxSlides: 4,
-                    slideWidth: 284
-                });
-            }
+        } else if ((windowWidthNew > 1100) && (windowWidthCaption < 1100)) {
+            windowWidthCaption = windowWidthNew;
+            bxslider_caption.reloadSlider({
+                pager: false,
+                controls: true,
+                minSlides: 1,
+                maxSlides: 4,
+                slideWidth: 284
+            });
         }
     });
+
+    if (window.matchMedia("(max-width: 850px)").matches) {
+        bxslider_caption.reloadSlider({
+            pager: false,
+            controls: true,
+            minSlides: 1,
+            maxSlides: 3,
+            slideWidth: 280
+        });
+    } else {
+        /* The viewport is greater than 700 pixels wide */
+    }
+
+
 
 });
 

@@ -495,8 +495,11 @@ $font-regular: 14px "Open Sans";
     	border: none;
     	margin: 0;
 	    background: transparent;
-	    padding: 30px 10px;
+	    padding: 30px 0;
 	    box-sizing: content-box;
+	    img {
+	        margin: 0 auto;
+	    }
 
 	    .bx-controls-direction {
     	    position: absolute;
@@ -529,12 +532,14 @@ $font-regular: 14px "Open Sans";
 			border-style: solid;
 			border-color: #000;
 			padding: 25px;
+			height: 565px;
 			.goods-head {
 			    margin: 21px 0;
 			    font-family: "Open Sans", sans-serif;
 			    font-size: 16px;
 			    line-height: 24px;
 				color: $text-color;
+				height: 120px;
 			}
 			.goods-number {
 				font-family: $OpenSans;
@@ -542,12 +547,21 @@ $font-regular: 14px "Open Sans";
 				color: #999999;
 				padding: 0;
 			}
-			.new-price {
+			.new-price, .old-price {
 				font-family: "Open Sans", sans-serif;
-			    margin-top: 16px;
 			    font-size: 28px;
 			    display: inline-block;
+			}
+			.new-price {
+				display: block;
+				color: $active-color;
+			}
+			.old-price {
 				color: $text-color;	
+			}
+			.new-price + .old-price {
+			    font-size: 20px;
+			    text-decoration: line-through;
 			}
 			.currensy {
 				font-family: $OpenSans;
@@ -555,6 +569,9 @@ $font-regular: 14px "Open Sans";
 				font-weight: 300;
 				color: $text-color;
 				vertical-align: super;
+			}
+			.new-price ~ .old-price > .currensy {
+			    font-size: 12px;
 			}
 		}
 	}
@@ -805,15 +822,18 @@ $font-regular: 14px "Open Sans";
 }
 
 .other-goods-head {
-	font-size: 35px;
+	font-size: 34px;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1100px) {
 	.asaide {
     	padding: 0 0 0 25px;
     	.btn {
     		padding: 12px 26px;
     	}
+	}
+	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
+	    right: -70px;
 	}
 }
 
@@ -824,6 +844,14 @@ $font-regular: 14px "Open Sans";
 	.goods-number {
 	    padding-left: 9px;
 	}
+	.other-goods-head {
+    	width: 80%;
+	}
+
+	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
+	    right: 60px;
+	}
+
 }
 
 @media screen and (max-width: 925px) {
@@ -882,7 +910,6 @@ $font-regular: 14px "Open Sans";
 	.slider-wrapper {
 		margin: 38px 0 20px;	
 	}	
-
 }
 
 @media screen and (max-width: 700px) {
