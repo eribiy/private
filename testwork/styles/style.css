@@ -329,7 +329,7 @@
   box-shadow: none;
   border: none;
   margin: 0; }
-
+/*
 .bxslider-vertical-wrapper {
   position: absolute;
   top: calc(50% - 188px);
@@ -354,7 +354,7 @@
     .bxslider-vertical-wrapper .bx-wrapper .bx-controls-direction .bx-next {
       top: 346px;
       background: url(../images/sprite.png) no-repeat -227px 7px; }
-
+*/
 .bxslider-caption-wrapper {
   margin: 0 auto; }
   .bxslider-caption-wrapper .bx-wrapper {
