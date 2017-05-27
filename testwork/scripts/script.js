@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.mobile-btn').click(function () {
         $('.mobile-nav').slideToggle();
     });
+
     $('.accordion').click(function() {
 		$(this).toggleClass('arrowClose').toggleClass('arrowOpen');
      
@@ -18,6 +19,11 @@ $(document).ready(function(){
 
         $(".info-tab-link").removeClass("active");
         $(this).addClass("active");
+/*
+        $('.tab-icon').css('display', 'block');
+        $('.info-tab-link').css('font-size', '0');
+        $('.info-tab-link.active').css('font-size', '18px').children('.tab-icon').css('display', 'none');
+        */
     });
 
     $('.bxslider').bxSlider({
@@ -27,5 +33,6 @@ $(document).ready(function(){
         prevText: '← Go back'
     });
 });
+
 
 
