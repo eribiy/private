@@ -14,11 +14,11 @@ $(document).ready(function() {
     });
 
     $('.info-tab-link').click(function () {
-        $('.tabcontent').removeClass('active');
-        $('#'+ $(this).data('tab')).addClass('active');
-
         $('.info-tab-link').removeClass('active');
         $(this).addClass("active");
+
+        $('.tabcontent').removeClass('active');
+        $('#'+ $(this).data('tab')).addClass('active');
     });
 
     var slider_main = $('.bxslider-main').bxSlider({
@@ -30,7 +30,7 @@ $(document).ready(function() {
         controls: false
     });
 
-    var slider_vertcal_options_h = {
+    var slider_vertical_options_h = {
         mode: 'horizontal',
         pager: false,
         controls: true,
@@ -40,11 +40,12 @@ $(document).ready(function() {
         maxSlides: 7,
         startSlide: 0,
         slideMargin: 10,
+        infiniteLoop: false,
         onSlideBefore: function($slideElement, oldIndex, newIndex) {
             slider_main.goToSlide(newIndex);
         }
     };
-    var slider_vertcal_options_v = {
+    var slider_vertical_options_v = {
         mode: 'vertical',
         pager: false,
         controls: true,
@@ -54,21 +55,27 @@ $(document).ready(function() {
         maxSlides: 7,
         startSlide: 0,
         slideMargin: 10,
+        infiniteLoop: false,
         onSlideBefore: function($slideElement, oldIndex, newIndex) {
             slider_main.goToSlide(newIndex);
+            $('.bxslider-vertical img').removeClass('active-preview');
+            $('.bxslider-vertical img[data-number="'+newIndex+'"]').addClass('active-preview');
+            console.log('.bxslider-vertical img[data-number="'+newIndex+'"]');
+            console.log($('.bxslider-vertical img[data-number="'+newIndex+'"]').attr('src'));
         }
     };
-    var slider_vertical = $('.bxslider-vertical').bxSlider(slider_vertcal_options_v);
+    var slider_vertical = $('.bxslider-vertical').bxSlider(slider_vertical_options_v);
 
-/*
+
     var i = 0;
     $('.bxslider-vertical img').each(function(index) {
         $(this).data('number', i++);
     });
     $('.bxslider-vertical img').click(function() {
+        console.log($(this).data('number'));
         slider_main.goToSlide($(this).data('number'));
     });
-*/
+
     
     var bxslider_caption_options_A = {
         pager: false,
@@ -103,12 +110,12 @@ $(document).ready(function() {
     var windowWidth = $(window).width();
     $(window).resize(function() {
         var windowWidthNew = $(window).width();
-        if ((windowWidthNew < 600) && (windowWidth > 600)) {
+        if ((windowWidthNew < 700) && (windowWidth > 700)) {
             windowWidth = windowWidthNew;
-            slider_vertical.reloadSlider(slider_vertcal_options_h);
-        } else if ((windowWidthNew > 600) && (windowWidth < 600)) {
+            slider_vertical.reloadSlider(slider_vertical_options_h);
+        } else if ((windowWidthNew > 700) && (windowWidth < 700)) {
             windowWidth = windowWidthNew;
-            slider_vertical.reloadSlider(slider_vertcal_options_v);
+            slider_vertical.reloadSlider(slider_vertical_options_v);
         }
     });
 
@@ -116,16 +123,16 @@ $(document).ready(function() {
     $(window).resize(function() {
         var windowWidthNew = $(window).width();
         console.log(windowWidthNew);
-        if ((windowWidthNew <= 320)) {
-            if ((windowWidthCaption > 320)) {
+        if ((windowWidthNew <= 480)) {
+            if ((windowWidthCaption > 480)) {
                 console.log('D');
                 windowWidthCaption = windowWidthNew;
                 bxslider_caption.reloadSlider(bxslider_caption_options_D);
             } else {
                 return;
             }
-        } else if ((windowWidthNew > 320) && (windowWidthNew <= 750)) {
-            if (((windowWidthCaption > 750) || (windowWidthCaption < 320))) {
+        } else if ((windowWidthNew > 480) && (windowWidthNew <= 750)) {
+            if (((windowWidthCaption > 750) || (windowWidthCaption < 480))) {
                 console.log('C');
                 windowWidthCaption = windowWidthNew;
                 bxslider_caption.reloadSlider(bxslider_caption_options_C);

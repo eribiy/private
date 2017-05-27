@@ -130,6 +130,7 @@ $font-regular: 14px "Open Sans";
     background: $header-background;
     min-width: 160px;	
     z-index: 1;
+    top: 25px;
 
     .nav-dropdown-item {
     	padding: 8px 16px;
@@ -357,6 +358,7 @@ $font-regular: 14px "Open Sans";
 }
 
 .row {
+	position: relative;
 	font-size: 0;
 	margin-top: 42px;
 	max-width: 663px;
@@ -452,11 +454,12 @@ $font-regular: 14px "Open Sans";
 }
 .bxslider-vertical-wrapper {
 	position: absolute;
-    top: calc(50% - 188px);
+    top: 0;
     right: 0;
     .slide {
     	img {
     		width: 55px;
+    		cursor: pointer;
     	}
     }
 	.bx-wrapper {
@@ -480,7 +483,8 @@ $font-regular: 14px "Open Sans";
 		}
 
 		.bx-controls-direction .bx-next {
-			top: 346px;
+			top: initial;
+   			bottom: 0;
 		    background: url(../images/sprite.png) no-repeat -227px 7px;
 		}
 			}
@@ -835,9 +839,12 @@ $font-regular: 14px "Open Sans";
 	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
 	    right: -70px;
 	}
+	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
+	    right: 60px;
+	}
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1000px) {
 	.goods-head {
 	    margin: 0 0 14px;
 	}
@@ -847,11 +854,6 @@ $font-regular: 14px "Open Sans";
 	.other-goods-head {
     	width: 80%;
 	}
-
-	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
-	    right: 60px;
-	}
-
 }
 
 @media screen and (max-width: 925px) {
@@ -912,7 +914,7 @@ $font-regular: 14px "Open Sans";
 	}	
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 717px) {
 	.goods-head, .goods-number-wrapper {
 	    text-align: center;
 	}
@@ -929,8 +931,41 @@ $font-regular: 14px "Open Sans";
 	.tabcontent .download-links-wrapper .download-item {
 	    width: 100%;
 	}
-
+	.slider-wrapper {
+		margin: 38px 0 125px;
+	}
+	.bxslider-main-wrapper {
+	    padding-right: 0;
+	}
+	.bxslider-vertical-wrapper {
+	    top: initial;
+	    bottom: -100px;
+	    right: initial;
+	    left: 0;
+	    .bx-wrapper {
+		    padding: 25px 58px;
+		    .bx-controls-direction {
+		    	a {
+	    		    width: 58px;
+				    height: 28px;
+				    left: initial;
+				    bottom: initial;
+		    	}
+		    	.bx-prev {
+		    		top: calc(50% - 14px);
+		    		left: 0;
+	    		    background: url(../images/sprite.png) no-repeat -340px -7px;
+		    	}
+		    	.bx-next {
+		    		top: calc(50% - 14px);
+		    		right: 0;
+		    		background: url(../images/sprite.png) no-repeat -403px -7px;
+		    	}
+		    }
+		}
+	}
 }
+
 
 @media screen and (max-width: 600px) {
 	.head .info-store-wrapper {
@@ -958,6 +993,11 @@ $font-regular: 14px "Open Sans";
 	.icon-wrapper {
 	    text-align: center;
 	}
+	.bxslider-caption-wrapper .bx-wrapper .bx-controls-direction {
+        right: calc(50% - 43px);
+	    bottom: 20px;
+	    top: initial;
+	}
 
 }
 
@@ -984,8 +1024,7 @@ $font-regular: 14px "Open Sans";
 				display: none;
 			}
 		}
-	}
-	
+	}	
 }
 
 @media screen and (max-width: 400px) {
@@ -1037,4 +1076,8 @@ $font-regular: 14px "Open Sans";
 	    font-size: 35px;
 	}
 
+}
+
+.active-preview {
+	border: 1px solid #1486cc;
 }
