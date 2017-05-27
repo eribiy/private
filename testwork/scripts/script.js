@@ -21,16 +21,6 @@ $(document).ready(function() {
         $(this).addClass("active");
     });
 
-    /*var slider = $('.bxslider').bxSlider({
-        minSlides: 3,
-        pager: false,
-        slideWidth: 300,
-        nextSelector: '#slider-next',
-        prevSelector: '#slider-prev',
-        nextText: 'Onward →',
-        prevText: '← Go back'
-    });*/
-
     var slider_main = $('.bxslider-main').bxSlider({
         mode: 'fade',
         slideMargin: 0,
@@ -40,17 +30,35 @@ $(document).ready(function() {
         controls: false
     });
 
-    var slider_vertical = $('.bxslider-vertical').bxSlider({
-        mode: 'vertical',
-        slideMargin: 8,
+    var slider_vertcal_options_h = {
+        mode: 'horizontal',
         pager: false,
         controls: true,
-        minSlides: 7,
         moveSlides: 1,
+        slideWidth: 55,
+        minSlides: 7,
+        maxSlides: 7,
+        startSlide: 0,
+        slideMargin: 10,
         onSlideBefore: function($slideElement, oldIndex, newIndex) {
             slider_main.goToSlide(newIndex);
         }
-    });
+    };
+    var slider_vertcal_options_v = {
+        mode: 'vertical',
+        pager: false,
+        controls: true,
+        moveSlides: 1,
+        slideWidth: 55,
+        minSlides: 7,
+        maxSlides: 7,
+        startSlide: 0,
+        slideMargin: 10,
+        onSlideBefore: function($slideElement, oldIndex, newIndex) {
+            slider_main.goToSlide(newIndex);
+        }
+    };
+    var slider_vertical = $('.bxslider-vertical').bxSlider(slider_vertcal_options_v);
 
     var i = 0;
     $('.bxslider-vertical img').each(function(index) {
@@ -73,27 +81,22 @@ $(document).ready(function() {
     });
 
     var windowWidth = $(window).width();
-
-    $( window ).resize(function() {
+    $(window).resize(function() {
         var windowWidthNew = $(window).width();
         if ((windowWidthNew < 600) && (windowWidth > 600)) {
             windowWidth = windowWidthNew;
-            slider_vertical.reloadSlider({
-                mode: 'horizontal'
-            });
+            slider_vertical.reloadSlider(slider_vertcal_options_h);
         } else {
             if ((windowWidthNew > 600) && (windowWidth < 600)) {
                 windowWidth = windowWidthNew;
-                slider_vertical.reloadSlider({
-                    mode: 'vertical'
-                });
+                slider_vertical.reloadSlider(slider_vertcal_options_v);
             }
         }
     });
 
-
+    /*
     var windowWidthCaption = $(window).width();
-    $( window ).resize(function() {
+    $(window).resize(function() {
         var windowWidthNew = $(window).width();
         if ((windowWidthNew < 1100) && (windowWidthCaption > 1100)) {
             windowWidthCaption = windowWidthNew;
@@ -117,7 +120,7 @@ $(document).ready(function() {
             }
         }
     });
-
+*/
 });
 
 
