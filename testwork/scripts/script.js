@@ -70,14 +70,35 @@ $(document).ready(function() {
     });
 */
     
-    var bxslider_caption = $('.bxslider-caption').bxSlider({
+    var bxslider_caption_options_A = {
+        pager: false,
+        controls: true,
+        minSlides: 4,
+        maxSlides: 4,
+        slideWidth: 284
+    };
+    var bxslider_caption_options_B = {
+        pager: false,
+        controls: true,
+        minSlides: 3,
+        maxSlides: 3,
+        slideWidth: 284
+    };
+    var bxslider_caption_options_C = {
+        pager: false,
+        controls: true,
+        minSlides: 2,
+        maxSlides: 2,
+        slideWidth: 284
+    };
+    var bxslider_caption_options_D = {
         pager: false,
         controls: true,
         minSlides: 1,
-        maxSlides: 4,
+        maxSlides: 1,
         slideWidth: 284
-        
-    });
+    };
+    var bxslider_caption = $('.bxslider-caption').bxSlider(bxslider_caption_options_A);
 
     var windowWidth = $(window).width();
     $(window).resize(function() {
@@ -91,31 +112,40 @@ $(document).ready(function() {
         }
     });
 
-    /*
     var windowWidthCaption = $(window).width();
     $(window).resize(function() {
         var windowWidthNew = $(window).width();
-        if ((windowWidthNew < 1100) && (windowWidthCaption > 1100)) {
+        console.log(windowWidthNew);
+        if ((windowWidthNew <= 320)) {
+            if ((windowWidthCaption > 320)) {
+                console.log('D');
+                windowWidthCaption = windowWidthNew;
+                bxslider_caption.reloadSlider(bxslider_caption_options_D);
+            } else {
+                return;
+            }
+        } else if ((windowWidthNew > 320) && (windowWidthNew <= 750)) {
+            if (((windowWidthCaption > 750) || (windowWidthCaption < 320))) {
+                console.log('C');
+                windowWidthCaption = windowWidthNew;
+                bxslider_caption.reloadSlider(bxslider_caption_options_C);
+            } else {
+                return;
+            }
+        } else if ((windowWidthNew > 750) && (windowWidthNew <= 970)) {
+            if (((windowWidthCaption > 970) || (windowWidthCaption < 750))) {
+                console.log('B');
+                windowWidthCaption = windowWidthNew;
+                bxslider_caption.reloadSlider(bxslider_caption_options_B);
+            } else {
+                return;
+            }
+        } else if (windowWidthCaption < 970) {
+            console.log('A');
             windowWidthCaption = windowWidthNew;
-            bxslider_caption.reloadSlider({
-                pager: false,
-                controls: true,
-                minSlides: 1,
-                maxSlides: 3,
-                slideWidth: 284
-            });
-        } else if ((windowWidthNew > 1100) && (windowWidthCaption < 1100)) {
-            windowWidthCaption = windowWidthNew;
-            bxslider_caption.reloadSlider({
-                pager: false,
-                controls: true,
-                minSlides: 1,
-                maxSlides: 4,
-                slideWidth: 284
-            });
+            bxslider_caption.reloadSlider(bxslider_caption_options_A);
         }
     });
-*/
 });
 
 
