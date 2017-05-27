@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
+
+
+    <!-- bxSlider CSS file -->
+    <link href="./bxslider/jquery.bxslider.css" rel="stylesheet" />
 </head>
 <body>
 <div class="wrapper">
@@ -192,10 +196,10 @@
                 </div>
                 <div class="info-goods">
                     <ul class="info-tabs-wrapper">
-                        <li class="info-tab-link active" onclick="openTab(event, 'description')">Описание</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'guarantee')">Гарантия</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'designer')">Дизайнер</li>
-                        <li class="info-tab-link" onclick="openTab(event, 'brand')">Бренд</li>
+                        <li data-tab="description" class="info-tab-link active">Описание</li>
+                        <li data-tab="warranty" class="info-tab-link">Гарантия</li>
+                        <li data-tab="designer" class="info-tab-link">Дизайнер</li>
+                        <li data-tab="brand" class="info-tab-link">Бренд</li>
                     </ul>
                     <div id="description" class="tabcontent active">
                         <p class="article">Одна линия, много возможностей. Cерия Lirio Nick-Knack от Philips, новый торшер, который вдохновляет, идея светильника начинается с прямой линии, Lirio Nick-Knack могут быть скручены в 16 различных положениях. Доступные напольные светильники Lirio Nick-Knack выполнены в 5 ярких цветах (красный, жёлтый, синий, белый, чёрный), это игривые торшеры приносят эффект прямого и отраженного освещения, с дизайнерскими светильниками Lirio Nick-Knack вы можете читать книгу или просто создать приятную атмосферу в вашем доме. Сочетая элегантный дизайн с LED лампой, Lirio Nick-Knack является одной из первых линий большой истории вашего дома.</p>
@@ -222,7 +226,7 @@
                             </span>
                         </div>
                     </div>
-                    <div id="guarantee" class="tabcontent">
+                    <div id="warranty" class="tabcontent">
                         <p class="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div id="designer" class="tabcontent">
@@ -321,11 +325,73 @@
             <section class="other-goods">
                 <h2 class="goods-head other-goods-head">Возможно Вас заинтересуют следующие товары</h2>
                 <div class="slider-wrapper">
+                    <ul class="bxslider">
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                A
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                B
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                C
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                AA
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                BB
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                CC
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                AAA
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                BBB
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="./images/logo.png" />
+                                CCC
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="outside">
+                    <h3>This div is outside of the slider</h3>
+                    <p><span id="slider-prev"></span> | <span id="slider-next"></span></p>
                 </div>
             </section>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./bxslider/jquery.bxslider.min.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 </html>

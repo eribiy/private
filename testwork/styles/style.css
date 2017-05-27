@@ -1,5 +1,6 @@
 .wrapper {
-  background: #fff; }
+  background: #fff;
+}
 
 .center {
   max-width: 1170px;
@@ -529,3 +530,8 @@
   .other-goods-head {
     font-size: 28px;
     font-weight: 300; } }
+
+.bxslider li {
+  display: inline-block;
+  width: 300px;
+}
