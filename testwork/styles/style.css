@@ -374,7 +374,7 @@
     width: 25%;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     vertical-align: middle;
     color: #000;
@@ -390,6 +390,8 @@
     color: #ee3346; }
 
 .tab-icon {
+  display: none;
+  margin: 0 auto;
   width: 25px;
   height: 25px;
   border: none;
@@ -399,7 +401,7 @@
 .tab-icon.description {
   background-position: -14px -269px; }
 
-.tab-icon.guarantee {
+.tab-icon.warranty {
   background-position: -56px -269px; }
 
 .tab-icon.designer {
@@ -558,7 +560,6 @@
   .other-goods-head {
     font-size: 28px;
     font-weight: 300; }
-
   .head .info-store-schedule {
     display: none; } }
 
@@ -590,6 +591,20 @@
     border-radius: 0 8px 8px 0; }
   .icon-wrapper {
     text-align: center; } }
+
+@media screen and (max-width: 500px) {
+  .info-tabs-wrapper .info-tab-link {
+    width: 20%; }
+    .info-tabs-wrapper .info-tab-link span {
+      display: none; }
+    .info-tabs-wrapper .info-tab-link .tab-icon {
+      display: block; }
+  .info-tabs-wrapper .info-tab-link.active {
+    width: 40%; }
+    .info-tabs-wrapper .info-tab-link.active span {
+      display: block; }
+    .info-tabs-wrapper .info-tab-link.active .tab-icon {
+      display: none; } }
 
 @media screen and (max-width: 400px) {
   .center-head {

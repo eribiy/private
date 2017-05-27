@@ -14,16 +14,11 @@ $(document).ready(function(){
     });
 
     $('.info-tab-link').click(function () {
-        $(".tabcontent").removeClass('active');
-        $("#"+ $(this).data('tab')).addClass("active");
+        $('.tabcontent').removeClass('active');
+        $('#'+ $(this).data('tab')).addClass('active');
 
-        $(".info-tab-link").removeClass("active");
+        $('.info-tab-link').removeClass('active');
         $(this).addClass("active");
-/*
-        $('.tab-icon').css('display', 'block');
-        $('.info-tab-link').css('font-size', '0');
-        $('.info-tab-link.active').css('font-size', '18px').children('.tab-icon').css('display', 'none');
-        */
     });
 
     $('.bxslider').bxSlider({

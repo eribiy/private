@@ -510,7 +510,7 @@ $font-regular: 14px "Open Sans";
 		width: 25%;
 		font-family: $OpenSans;
 		font-size: 18px;
-		font-weight: 200;
+		font-weight: 300;
 		text-align: center;
 		vertical-align: middle;
 		color: #000;
@@ -527,32 +527,39 @@ $font-regular: 14px "Open Sans";
 	.info-tab-link.active {
 		border-bottom: 1px solid $active-color;
 		font-weight: 600;
-		color: $active-color
+		color: $active-color;
 	}
 	
 }
 .tab-icon {
+	display: none;
+	margin: 0 auto;
 	width: 25px;
 	height: 25px;
 	border: none;
 	background: transparent;
 	background: url(../images/sprite.png);
 }
+
 .tab-icon.description {
 	background-position: -14px -269px;
 }
-.tab-icon.guarantee {
+
+.tab-icon.warranty {
 	background-position: -56px -269px;
 }
+
 .tab-icon.designer {
     width: 27px;
 	background-position: -93px -269px;
 }
+
 .tab-icon.brand {
 	width: 27px;
     height: 27px;
 	background-position: -137px -270px;
 }
+
 .tabcontent  {
 		display: none;
 
@@ -796,9 +803,32 @@ $font-regular: 14px "Open Sans";
 }
 
 @media screen and (max-width: 500px) {
-	
+	.info-tabs-wrapper {
 
+		.info-tab-link {
+			width: 20%;
+			span {
+				display: none;
+			}
+			.tab-icon {
+				display: block;
+			}
+
+		}
+
+		.info-tab-link.active {
+			width: 40%;
+			span {
+				display: block;
+			}
+			.tab-icon {
+				display: none;
+			}
+		}
+	}
+	
 }
+
 @media screen and (max-width: 400px) {
 	.center-head {
 		display: none;
