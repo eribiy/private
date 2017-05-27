@@ -113,21 +113,6 @@ $(document).ready(function() {
             });
         }
     });
-
-    if (window.matchMedia("(max-width: 850px)").matches) {
-        bxslider_caption.reloadSlider({
-            pager: false,
-            controls: true,
-            minSlides: 1,
-            maxSlides: 3,
-            slideWidth: 280
-        });
-    } else {
-        /* The viewport is greater than 700 pixels wide */
-    }
-
-
-
 });
 
 
