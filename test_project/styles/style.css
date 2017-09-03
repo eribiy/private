@@ -1,0 +1,170 @@
+/* main styles */
+.wrapper-all {
+	background: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #669999;
+}
+
+/* header styles */
+.header {
+
+}
+/* top header styles */
+.top-header {
+	background: #f1f4f8;
+}
+
+.center {
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.top-header .center {
+	/* padding-top: 5px;
+	padding-bottom: 5px; */
+	display: table;
+}
+
+.welcome-text-wrap {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.welcome-text {
+	text-transform: uppercase;
+}
+
+.welcome-text-main {
+	font-weight: 700;
+
+}
+
+.visit-wrap {
+	float: right;
+	display: table;
+	
+}
+
+.visit-item {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	text-transform: uppercase;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-left: 1px solid #cccccc;
+}
+
+/* .visit-item:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 4px;
+	height: 47px;
+	background: url(../images/sprite.png);
+} */
+
+.log-wrap {
+	padding-right: 22px;
+	padding-left: 25px;
+}
+
+.sign-wrap {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.call-me {
+	position: relative;
+	padding-right: 18px;
+	padding-left: 54px;
+	max-width: 216px;
+}
+
+.phone-icon {
+	position: absolute;
+	left: 28px;
+	font-size: 34px;
+}
+
+.tel {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: #336666;
+}
+
+.message-me {
+	padding-left: 26px;
+}
+
+.btn {
+	background: #ff6633;
+	border: none;
+	box-shadow: none;
+	font-size: 14px;
+	line-height: 37px;
+    padding-right: 18px;
+	padding-left: 17px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* logo header styles */
+.header-logo {
+	border-bottom: 1px solid #cccccc;
+}
+
+.header-logo .center {
+	line-height: 86px;
+	
+}
+
+.logo-first-wrap, .logo-second-wrap {
+	display: inline-block;
+}
+.logo-second-wrap {
+	float: right;
+}
+
+.logo-first, .logo-second {
+	position: relative;
+	vertical-align: middle;
+}
+
+.logo-first  {
+    top: 5px;
+    left: -5px;
+}
+
+.logo-second {
+    top: 3px;
+}
+
+/* header nav styles */
+.header-nav {
+	border-bottom: 1px solid #cccccc;
+
+}
+
+.nav {
+	display: table;
+	width: 100%;
+}
+
+.nav-item {
+	display: table-cell;
+	border-right: 1px solid #cccccc;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 37px;
+}
+
+.nav-item:last-child {
+	border-right: none;
+};
