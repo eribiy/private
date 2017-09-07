@@ -400,7 +400,7 @@
 	padding-right: 50px;
 }
 
-.area-section .h3 {
+.h3 {
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 37px;
@@ -477,7 +477,6 @@
     font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	/*line-height: 36px;*/
 	text-align: center;
 	color: #535f6e;
     vertical-align: middle;
@@ -496,4 +495,89 @@
 
 .tabcontent.active {
   display: block; 
+}
+
+.community-section .column {
+	display: inline-block;
+	width: 555px;
+	padding: 0 15px;
+	vertical-align: top;
+}
+
+.community-section .h3 {
+	color: #435061;
+}
+
+.community-section .text-info {
+	text-align: left;
+	margin: 30px 0 50px;
+}
+
+.h4-wrap {
+	position: relative; 
+	padding-left: 85px;
+}
+.h4 {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 37px;
+	text-transform: uppercase;
+	color: #435061;
+}
+
+.community-section .h4 + .text-info {
+	margin: 8px 0 55px;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.community-section .h4-wrap:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	background-color: #31a2e1;
+	background-image: url(../images/sprite.png);
+}
+
+.community-section .sheep:before {
+	background-position: 8px -116px;
+}
+
+.community-section .home:before {
+	background-position: -143px -113px;
+}
+
+/*community-section slider styles*/
+
+.community-section .bx-wrapper {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    border: 15px solid #fff;
+    margin-bottom: 0;
+}
+
+.bx-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-height: 302.75px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #fff;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #31a2e1;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 18px;
 }
